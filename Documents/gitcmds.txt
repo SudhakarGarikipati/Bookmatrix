@@ -39,3 +39,13 @@ git push origin dev
 //If you only want to change the last commit:
 git commit --amend -m "New text file with git commands"
 git push --force
+
+//Merge dev to main
+git checkout main
+git merge dev
+//Push main to GitHub
+git push origin main
+
+// Get the latest changes from GitHub  main to your branch
+git checkout dev
+git pull origin main
