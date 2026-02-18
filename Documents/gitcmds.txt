@@ -1,0 +1,38 @@
+//This creates a new local Git repository.
+git init
+//Add a .gitignore (important for .NET, Angular, React)
+curl -L https://github.com/github/gitignore/raw/main/VisualStudio.gitignore -o .gitignore
+//Stage all files
+git add .
+// Commit your initial code
+git commit -m ".gitignore commit for BookMatrix"
+// 6. Add your GitHub repo as the remote
+git remote add origin https://github.com/SudhakarGarikipati/Bookmatrix.git
+// 7.Set your main branch name
+git branch -M main
+// Pull if remote have existing changes
+git pull origin main
+//  8. Push your project to GitHub
+git push -u origin main
+
+
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/SudhakarGarikipati/Bookmatrix.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Option 1 — Keep GitHub changes + merge your local code
+git pull origin main --allow-unrelated-histories
+git commit -m ".gitignore commit for BookMatrix"
+git push -u origin main
+
+//Check out dev branch
+git checkout dev
+//3. Add your changes
+git add .
+//Commit your changes
+git commit -m "Add DBSchema sql file for the solution"
+//5. Push to dev
+git push origin dev
