@@ -36,3 +36,6 @@ git add .
 git commit -m "Add DBSchema sql file for the solution"
 //5. Push to dev
 git push origin dev
+//If you only want to change the last commit:
+git commit --amend -m "New text file with git commands"
+git push --force
