@@ -1,0 +1,6 @@
+@BookMatrix.API_HostAddress = http://localhost:5212
+
+GET {{BookMatrix.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
