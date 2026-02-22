@@ -1,4 +1,4 @@
-@BookMatrix.API_HostAddress = http://localhost:5212/api
+@BookMatrix.API_HostAddress = https://localhost:7053/api
 
 # Post {{BookMatrix.API_HostAddress}}/Authentication/Login
 # Accept: application/json

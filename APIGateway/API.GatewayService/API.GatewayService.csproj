@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="HttpClient\" />
-    <Folder Include="wwwroot\images\" />
+    <PackageReference Include="Ocelot" Version="24.1.0" />
   </ItemGroup>
 
 </Project>

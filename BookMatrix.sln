@@ -64,6 +64,10 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Client.Angular", "FrontendS
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "client.react", "FrontendService\Client.React\client.react.esproj", "{6D25EEF9-4716-6571-90AE-7282108A0AA6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateway", "APIGateway", "{3B60179C-435C-42B4-9F5B-BD8C02B1B709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.GatewayService", "APIGateway\API.GatewayService\API.GatewayService.csproj", "{C3775751-5C6C-43D3-940B-DA94BBC0A60C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -150,6 +154,10 @@ Global
 		{6D25EEF9-4716-6571-90AE-7282108A0AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D25EEF9-4716-6571-90AE-7282108A0AA6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D25EEF9-4716-6571-90AE-7282108A0AA6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C3775751-5C6C-43D3-940B-DA94BBC0A60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3775751-5C6C-43D3-940B-DA94BBC0A60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3775751-5C6C-43D3-940B-DA94BBC0A60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3775751-5C6C-43D3-940B-DA94BBC0A60C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -180,6 +188,7 @@ Global
 		{72976ABE-2055-43A3-A140-63C95BC3FFD6} = {85A711DC-1488-4C1A-A1B1-475D886934A8}
 		{99BFD2A1-E019-3C75-CEFA-BD378FDB628D} = {85A711DC-1488-4C1A-A1B1-475D886934A8}
 		{6D25EEF9-4716-6571-90AE-7282108A0AA6} = {85A711DC-1488-4C1A-A1B1-475D886934A8}
+		{C3775751-5C6C-43D3-940B-DA94BBC0A60C} = {3B60179C-435C-42B4-9F5B-BD8C02B1B709}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9CEFA538-2A30-49A0-B351-3170FC6AB530}
