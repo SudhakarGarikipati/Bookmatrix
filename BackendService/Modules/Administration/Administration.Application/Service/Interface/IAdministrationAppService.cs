@@ -14,7 +14,7 @@ namespace Administration.Application.Service.Interface
 
         Task<List<UserDto>> GetAllUsersAsync();
 
-        Task<UserDto> LoginAsync(LoginDto loginDto);
+        Task<LoginUserDto> LoginAsync(LoginDto loginDto);
 
         Task RegisterRoleAsync(RoleDto role);
 

@@ -12,11 +12,13 @@ namespace Administration.Application.Service.Implementation
 
         private readonly IAdministrationRepository _administrationRepository;
         private readonly IMapper _mapper;
+        private readonly ITokenService _tokenService;
 
-        public AdministrationAppService(IAdministrationRepository administrationRepository, IMapper mapper)
+        public AdministrationAppService(IAdministrationRepository administrationRepository, IMapper mapper, ITokenService tokenService)
         {
             _administrationRepository = administrationRepository;
             _mapper = mapper;
+            _tokenService = tokenService;
         }
 
         public async Task RegisterUserAsync(SignInDto signInDto)
@@ -76,7 +78,7 @@ namespace Administration.Application.Service.Implementation
             return res;
         }
 
-        public async Task<UserDto> LoginAsync(LoginDto loginDto)
+        public async Task<LoginUserDto> LoginAsync(LoginDto loginDto)
         {
             if(loginDto.Username == null || loginDto.Password == null)
             {
@@ -88,10 +90,13 @@ namespace Administration.Application.Service.Implementation
             {
                 throw new Exception("Password mismatch, authentication failed.");
             }
-            return _mapper.Map<UserDto>(userData);
+
+            var loginUserDto = _mapper.Map<LoginUserDto>(userData);
+            loginUserDto.Token = _tokenService.GenerateAccessToken(userData);
+            return loginUserDto;
         }
 
-        private static bool IsPasswordMatced(string hash, string password) => BC.Verify(hash, password);
+        private static bool IsPasswordMatced(string hash, string password) => BC.Verify(password, hash);
 
         public async Task RegisterRoleAsync(RoleDto roleDto)
         {

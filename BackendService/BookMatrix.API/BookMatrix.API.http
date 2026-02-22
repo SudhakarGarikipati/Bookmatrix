@@ -1,6 +1,38 @@
-@BookMatrix.API_HostAddress = http://localhost:5212
+@BookMatrix.API_HostAddress = http://localhost:5212/api
 
-GET {{BookMatrix.API_HostAddress}}/weatherforecast/
+# Post {{BookMatrix.API_HostAddress}}/Authentication/Login
+# Accept: application/json
+# content-type : application/json
+# {
+#   "username":"jobseeker@gmail.com",
+#   "password":"Jobseeker@12345678"
+# }
+
+# Post {{BookMatrix.API_HostAddress}}/Authentication/Register
+# Accept: application/json
+# content-type : application/json 
+# {
+#   "FirstName" : "sj",
+#   "LastName" : "js",
+#   "Email" : "sj@gmail.com",
+#   "PhoneNumber" : "34567890123",
+#   "Password" : "Sj@12345678"
+# }
+
+# POST {{BookMatrix.API_HostAddress}}/Authentication/ChangePassword
+# Accept: application/json
+# content-type : application/json
+# {
+#     "CurrentPassword" : "Sj@12345678",
+#     "NewPassword" : "Jssj@12345678",
+#     "email" : "sj@gmail.com"
+# }
+
+Post {{BookMatrix.API_HostAddress}}/Authentication/Login
 Accept: application/json
-
+content-type : application/json
+{
+  "username":"sj@gmail.com",
+  "password":"Jssj@12345678"
+}
 ###
