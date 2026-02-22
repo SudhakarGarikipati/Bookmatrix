@@ -1,7 +1,9 @@
-﻿using Administration.Application.Mappers;
+﻿using Administration.Application.Authentication;
+using Administration.Application.Mappers;
 using Administration.Application.Service.Implementation;
 using Administration.Application.Service.Interface;
 using Administration.Domain.Interfaces;
+using Administration.Infrastructure.ExternalServices;
 using Administration.Infrastructure.Persistance;
 using Administration.Infrastructure.Persistance.Repository;
 using Mapster;
@@ -23,6 +25,10 @@ namespace Administration.Infrastructure
             services.AddScoped<IAdministrationRepository, AdministrationRepository>();
 
             services.AddScoped<IAdministrationAppService, AdministrationAppService>();
+
+            //services.Configure<JwtSettings>(configuration["JwtSettings"]);
+
+            services.AddScoped<ITokenService, TokenService>();
 
             //Mapping
             var config = new TypeAdapterConfig();

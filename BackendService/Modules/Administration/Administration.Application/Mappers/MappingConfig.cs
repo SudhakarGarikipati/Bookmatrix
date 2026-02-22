@@ -10,6 +10,8 @@ namespace Administration.Application.Mappers
         {
             config.NewConfig<User, UserDto>()
                 .Map(dest => dest.Roles, src => src.Roles.Select(r=>r.RoleName).ToList<string>());
+            config.NewConfig<User, LoginUserDto>()
+               .Map(dest => dest.Roles, src => src.Roles.Select(r => r.RoleName).ToList<string>());
             config.NewConfig<UpdateUserDto, User>().TwoWays();
             config.NewConfig<SignInDto, User>();
             config.NewConfig<LoginDto, User>();

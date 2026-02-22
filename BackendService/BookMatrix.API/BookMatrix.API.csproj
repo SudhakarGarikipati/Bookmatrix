@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Modules\Administration\Administration.Application\Administration.Application.csproj" />
+    <ProjectReference Include="..\Modules\Administration\Administration.Infrastructure\Administration.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
