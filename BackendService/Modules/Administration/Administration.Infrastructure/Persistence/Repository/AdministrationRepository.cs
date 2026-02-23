@@ -1,8 +1,9 @@
 ﻿using Administration.Domain.Entities;
 using Administration.Domain.Interfaces;
+using Administration.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace Administration.Infrastructure.Persistance.Repository
+namespace Administration.Infrastructure.Persistence.Repository
 {
     public class AdministrationRepository : IAdministrationRepository
     {
@@ -71,7 +72,7 @@ namespace Administration.Infrastructure.Persistance.Repository
 
         public async Task<User> GetUserByEmailAsync(string email)
         {
-            var user = await _context.Users.Where(u => u.Email == email).FirstOrDefaultAsync();
+            var user = await _context.Users.Include(u=>u.Roles).Where(u => u.Email == email).FirstOrDefaultAsync();
             if (user == null)
             {
                 throw new Exception("User not found.");
@@ -79,7 +80,7 @@ namespace Administration.Infrastructure.Persistance.Repository
             return user;
         }
 
-        public async Task<List<User>> GetAllUsersAsync() => await _context.Users.ToListAsync();
+        public async Task<List<User>> GetAllUsersAsync() => await _context.Users.Include(u=>u.Roles).ToListAsync();
 
         public async Task RegisterRoleAsync(Role role)
         {

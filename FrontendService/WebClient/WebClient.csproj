@@ -7,8 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="HttpClient\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\CatalogManager\Data\" />
+    <Folder Include="Areas\CatalogManager\Models\" />
+    <Folder Include="Areas\Guest\Data\" />
+    <Folder Include="Areas\Guest\Models\" />
+    <Folder Include="Areas\InventoryManager\Data\" />
+    <Folder Include="Areas\InventoryManager\Models\" />
+    <Folder Include="Areas\Librarian\Data\" />
+    <Folder Include="Areas\Librarian\Models\" />
+    <Folder Include="Areas\Member\Data\" />
+    <Folder Include="Areas\Member\Models\" />
     <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.12" />
   </ItemGroup>
 
 </Project>

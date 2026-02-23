@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Administration.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Administration.Infrastructure.Persistance;
+namespace Administration.Infrastructure.Persistence;
 
 public partial class bookmatrixdbContext : DbContext
 {
